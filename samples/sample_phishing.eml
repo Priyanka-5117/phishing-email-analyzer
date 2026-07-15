@@ -1,0 +1,22 @@
+From: "PayPal Security" <security@paypa1-verify.com>
+To: victim@gmail.com
+Subject: URGENT: Your account has been suspended!
+Date: Mon, 14 Jul 2026 10:00:00 +0530
+Reply-To: paypal-noreply@evil-domain.ru
+Return-Path: <bounce@phishing-server.com>
+Message-ID: <abc123@phishing-server.com>
+Received-SPF: fail (domain does not designate as permitted sender)
+Authentication-Results: spf=fail; dmarc=fail
+
+Dear Customer,
+
+Your PayPal account has been suspended due to suspicious activity.
+Click the link below immediately to restore access:
+
+http://paypal-secure-login.evil-domain.ru/restore?id=12345
+http://click.malicious-site.com/track?user=victim
+
+Your account will be permanently deleted in 24 hours if you do not verify.
+
+Regards,
+PayPal Security Team
