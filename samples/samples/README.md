@@ -122,7 +122,7 @@ python analyzer.py sample_phishing.eml --output my_report.json
 
 [*] Parsing email: sample_phishing.eml
 
-📧 EMAIL SUMMARY
+EMAIL SUMMARY:
    From:    PayPal Security <security@paypa1-verify.com>
    To:      victim@gmail.com
    Subject: URGENT: Your account has been suspended!
@@ -137,10 +137,10 @@ python analyzer.py sample_phishing.eml --output my_report.json
     DKIM:  FAIL ❌
     DMARC: FAIL ❌
 
-🎯 RISK ASSESSMENT
+RISK ASSESSMENT:
    Score:  50/100
    Level:  🟠 HIGH
-   Verdict: 🚨 PHISHING DETECTED
+   Verdict: PHISHING DETECTED
 
 ✅ Full report saved to: phishing_report.json
 ```
@@ -149,12 +149,14 @@ python analyzer.py sample_phishing.eml --output my_report.json
 
 ## Repository Structure
 
+```
 phishing-analyzer/
 ├── analyzer.py              ← Main analysis tool
 ├── README.md                ← You are here
 └── samples/
-├── sample_phishing.eml  ← Sample phishing email
-└── phishing_report.json ← Sample JSON output report
+    ├── sample_phishing.eml  ← Sample phishing email
+    └── phishing_report.json ← Sample JSON output report
+```
 
 ---
 
