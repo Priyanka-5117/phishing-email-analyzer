@@ -113,36 +113,37 @@ python analyzer.py sample_phishing.eml --output my_report.json
 
 ## Sample Output
 
+```
 ╔═══════════════════════════════════════════════════╗
 ║         🛡️  PHISHING EMAIL ANALYZER               ║
 ║     IOC Extraction + Threat Intel + Risk Score    ║
 ║         MITRE ATT&CK: T1566 — Phishing           ║
 ╚═══════════════════════════════════════════════════╝
+
 [*] Parsing email: sample_phishing.eml
-EMAIL SUMMARY:
-From:    PayPal Security security@paypa1-verify.com
-To:      victim@gmail.com
-Subject: URGENT: Your account has been suspended!
+
+📧 EMAIL SUMMARY
+   From:    PayPal Security <security@paypa1-verify.com>
+   To:      victim@gmail.com
+   Subject: URGENT: Your account has been suspended!
+
 [*] Extracting IOCs...
-✅ IPs found:     0
-✅ URLs found:    2
-✅ Domains found: 6
+    ✅ IPs found:     0
+    ✅ URLs found:    2
+    ✅ Domains found: 6
+
 [*] Analyzing email authentication...
-SPF:   FAIL ❌
-DKIM:  FAIL ❌
-DMARC: FAIL ❌
-[*] Running threat intelligence lookups...
-Checking URL: http://click.malicious-site.com/track?user=victim
-Checking domain: paypa1-verify.com
-RISK ASSESSMENT:
-Score:  50/100
-Level:  🟠 HIGH
-Score breakdown:
-→ SPF check failed (+20)
-→ DKIM signature missing (+15)
-→ DMARC check failed (+15)
-Verdict: 🚨 PHISHING DETECTED
+    SPF:   FAIL ❌
+    DKIM:  FAIL ❌
+    DMARC: FAIL ❌
+
+🎯 RISK ASSESSMENT
+   Score:  50/100
+   Level:  🟠 HIGH
+   Verdict: 🚨 PHISHING DETECTED
+
 ✅ Full report saved to: phishing_report.json
+```
 
 ---
 
