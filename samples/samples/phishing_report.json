@@ -1,0 +1,76 @@
+{
+    "report_metadata": {
+        "tool": "Phishing Email Analyzer",
+        "author": "Your Name",
+        "version": "1.0",
+        "analysis_date": "2026-07-15T13:18:56.991071",
+        "mitre_technique": "T1566 - Phishing"
+    },
+    "email_headers": {
+        "from": "PayPal Security <security@paypa1-verify.com>",
+        "to": "victim@gmail.com",
+        "subject": "URGENT: Your account has been suspended!",
+        "date": "Tue, 14 Jul 2026 10:00:00 +0530",
+        "reply_to": "paypal-noreply@evil-domain.ru",
+        "return_path": "<bounce@phishing-server.com>",
+        "message_id": "<abc123@phishing-server.com>",
+        "x_originating_ip": "N/A"
+    },
+    "authentication": {
+        "spf_pass": false,
+        "dkim_pass": false,
+        "dmarc_pass": false
+    },
+    "iocs_extracted": {
+        "ip_addresses": [],
+        "urls": [
+            "http://click.malicious-site.com/track?user=victim",
+            "http://paypal-secure-login.evil-domain.ru/restore?id=12345"
+        ],
+        "domains": [
+            "gmail.com",
+            "paypa1-verify.com",
+            "paypal-secure-login.evil-domain.ru",
+            "evil-domain.ru",
+            "phishing-server.com",
+            "click.malicious-site.com"
+        ],
+        "total_iocs": 8
+    },
+    "threat_intelligence": {
+        "virustotal_results": {
+            "http://click.malicious-site.com/track?user=victim": {
+                "error": "HTTP 404"
+            },
+            "http://paypal-secure-login.evil-domain.ru/restore?id=12345": {
+                "error": "HTTP 404"
+            },
+            "gmail.com": {
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 60,
+                "undetected": 31
+            },
+            "paypa1-verify.com": {
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 55,
+                "undetected": 36
+            },
+            "paypal-secure-login.evil-domain.ru": {
+                "error": "HTTP 404"
+            }
+        },
+        "abuseipdb_results": {}
+    },
+    "risk_assessment": {
+        "risk_score": 50,
+        "risk_level": "HIGH",
+        "score_breakdown": [
+            "SPF check failed (+20)",
+            "DKIM signature missing (+15)",
+            "DMARC check failed (+15)"
+        ],
+        "verdict": "PHISHING DETECTED"
+    }
+}
