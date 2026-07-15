@@ -21,37 +21,37 @@ triaging phishing emails. This tool automates the entire process in seconds.
 ---
 
 ## What It Does
-
+```
 Input:  Raw phishing email (.eml file)
-│
-▼
-┌──────────────────┐
-│  Parse Headers   │ → From, To, Subject, Reply-To, Return-Path
-└──────────────────┘
-│
-▼
-┌──────────────────┐
-│  Check Auth      │ → SPF, DKIM, DMARC validation
-└──────────────────┘
-│
-▼
-┌──────────────────┐
-│  Extract IOCs    │ → IPs, URLs, Domains from headers + body
-└──────────────────┘
-│
-▼
-┌──────────────────┐
-│  Threat Intel    │ → VirusTotal API + AbuseIPDB API lookups
-└──────────────────┘
-│
-▼
-┌──────────────────┐
-│  Risk Scoring    │ → 0-100 score with breakdown
-└──────────────────┘
-│
-▼
+           │
+           ▼
+    ┌──────────────────┐
+    │  Parse Headers   │ → From, To, Subject, Reply-To, Return-Path
+    └──────────────────┘
+           │
+           ▼
+    ┌──────────────────┐
+    │  Check Auth      │ → SPF, DKIM, DMARC validation
+    └──────────────────┘
+           │
+           ▼
+    ┌──────────────────┐
+    │  Extract IOCs    │ → IPs, URLs, Domains from headers + body
+    └──────────────────┘
+           │
+           ▼
+    ┌──────────────────┐
+    │  Threat Intel    │ → VirusTotal API + AbuseIPDB API lookups
+    └──────────────────┘
+           │
+           ▼
+    ┌──────────────────┐
+    │  Risk Scoring    │ → 0-100 score with breakdown
+    └──────────────────┘
+           │
+           ▼
 Output: JSON Report + Terminal Summary + Verdict
-
+```
 ---
 
 ## Features
